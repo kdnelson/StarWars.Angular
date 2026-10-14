@@ -37,7 +37,7 @@ https://github.com/DanWahlin/Angular-RESTfulService
      d. All HTML files are pulled into the JS files at compile time, adding security to the application.
 + Observables versus Promises
   Observables emit multiple objects over time
-  Promises emit on object
+  Promises emit one object
   Observables are lazy, only called when subscribed to
   Promises are not lazy
   Observables can be cancelled by an unsubscribe call
@@ -162,6 +162,5 @@ ng-template
 
 HomeComponent.getMenuItemsPerManufacturer refreshes calling menuItems$ (observable, from menuItemService) and also filters on categoryFilters (observable, from categoryFilterService).
 However, categoryFilters$ never refreshed as menuItems$ does.  So I created a collection within the categoryFilterService containing the said observable - and used this list for filtering.  Why did I have to do this?
-
 
 ****** Architecture ******
